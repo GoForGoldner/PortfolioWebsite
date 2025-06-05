@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+html,
+body {
+  border: none;
+  outline: none;
+}
+
+hmtl {
+  scroll-behavior: smooth;
+}
+
+.main {
+  $background-black: hsl(40, 5.45%, 5.78%);
+  background-color: $background-black;
+  position: relative;
+  min-height: 100svh;
+}
+
+button {
+  font: inherit;
+}
+
+@mixin glowing-text($font-size, $color) {
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(to bottom, white 0%, white 60%, $color 85%, $color 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  font-size: $font-size;
+  font-weight: 600;
+  text-shadow: 0 0 20px change-color($color, $alpha: 1);
+}
+
+@mixin circular-gradient($inner-color, $outer-color) {
+  background: radial-gradient(circle at top, $inner-color, $outer-color, $outer-color), linear-gradient(to bottom, transparent, $outer-color);
+
+  background-blend-mode: overlay;
+}

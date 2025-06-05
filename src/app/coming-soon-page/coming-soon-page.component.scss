@@ -1,0 +1,20 @@
+@import '../../styles.scss';
+
+.main {
+  display: grid;
+  place-items: center;
+  $center: hsl(40, 0%, 25%);
+  $outer: hsl(0, 0%, 3%);
+
+  @include circular-gradient($center, $outer);
+}
+
+h1 {
+  @include glowing-text(3rem, grey);
+}
+
+back-to-home-page-button {
+  position: fixed;
+  left: 2.5%;
+  top: 5%;
+}

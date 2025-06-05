@@ -1,0 +1,40 @@
+nav {
+  width: 99svw;
+  padding: 1rem;
+  position: fixed;
+  color: white;
+  top: 1%;
+  left: 0;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    gap: 0.1rem;
+    place-items: center;
+    color: white;
+  }
+
+}
+
+#name {
+  position: absolute;
+  left: 2rem;
+}
+
+#linked-in {
+  position: absolute;
+  right: 7rem;
+}
+
+#resume {
+  position: absolute;
+  right: 1rem;
+}

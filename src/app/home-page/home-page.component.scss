@@ -1,0 +1,217 @@
+.main {
+  background-color: hsl(40, 5.45%, 5.78%);
+  display: grid;
+  gap: 5rem;
+
+  padding-top: 20dvh;
+  padding-bottom: 10dvh;
+
+  place-items: center;
+
+  .project {
+    display: grid;
+
+    position: relative;
+
+    filter: grayscale(80%);
+    width: 70%;
+    color: white;
+    border-radius: 1rem;
+    border: 1px solid hsl(40, 5.45%, 25.78%);
+    outline: 0.35rem solid hsl(40, 5.45%, 8%);
+    overflow: hidden;
+
+    .text {
+      pointer-events: none;
+      padding: 1rem 2rem;
+      width: fit-content;
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      span {
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+    }
+
+    img,
+    video {
+      pointer-events: none;
+      width: 85%;
+      margin: 2% 5% 0 5%;
+
+      border: 0.15rem solid grey;
+      border-radius: 0.5rem 0.5rem 0 0;
+      justify-self: center;
+      z-index: 1;
+    }
+
+    &:hover {
+      animation: on-hover 0.35s forwards;
+    }
+
+    &:not(:hover) {
+      animation: hover-leave 0.35s forwards;
+    }
+  }
+}
+
+.animate-leave {
+  pointer-events: none !important;
+  animation: on-page-leave 0.25s forwards !important;
+}
+
+.animate-nav-links {
+  pointer-events: none !important;
+  animation: nav-links-leave 0.20s forwards !important;
+}
+
+@keyframes nav-links-leave {
+  0% {
+    opacity: 1;
+    top: 2rem;
+  }
+
+  50% {
+    opacity: 0.25;
+    top: 1rem;
+  }
+
+  100% {
+    opacity: 0;
+    top: 0rem;
+  }
+}
+
+@keyframes on-page-leave {
+  from {
+    filter: brightness(0.6);
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes on-hover {
+  from {
+    filter: grayscale(100%);
+    width: 70%;
+  }
+
+  to {
+    filter: grayscale(0%);
+    width: 71.5%;
+  }
+}
+
+@keyframes hover-leave {
+  to {
+    filter: grayscale(100%);
+    width: 70%;
+  }
+
+  from {
+    filter: grayscale(0%);
+    width: 71.5%;
+  }
+}
+
+nav-bar {
+  position: fixed;
+  top: 2rem;
+  left: 0;
+}
+
+#cdrive {
+  img {
+    transform: translateY(1.5rem);
+    transition: transform 0.45s ease;
+  }
+
+  aspect-ratio: 1916/1027;
+  $outer-blue: hsl(209.45, 66.27%, 11.27%);
+  $inner-blue: hsl(209.13, 54.76%, 40.59%);
+  $grey: hsl(0 0% 3%);
+  background: linear-gradient(to right, $outer-blue, $inner-blue, $inner-blue, $outer-blue),
+  linear-gradient(to bottom, transparent, $grey);
+
+  background-blend-mode: overlay;
+}
+
+#cdrive:hover {
+  img {
+    transform: translateY(0rem);
+  }
+}
+
+#zombie-wash {
+  $outer-purple: hsl(273.96, 92.98%, 11.18%);
+  $inner-purple: hsl(273.81, 90%, 22.41%);
+  $grey: hsl(0 0% 3%);
+
+  video {
+    filter: blur(2px) brightness(0.8);
+    box-shadow: 0 0 0 0 hsl(273.96, 90%, 25%);
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    border-color: $grey;
+
+    transition: filter 0.35s ease;
+  }
+
+
+  background: linear-gradient(to right, $outer-purple, $inner-purple, $inner-purple, $outer-purple),
+  linear-gradient(to bottom, transparent, $grey);
+
+  background-blend-mode: overlay;
+}
+
+#zombie-wash:hover {
+  video {
+    filter: blur(0px) brightness(1);
+  }
+}
+
+
+#surround {
+  $outer-green: hsl(104, 64%, 15%);
+  $inner-green: hsl(104, 64%, 25%);
+  $grey: hsl(0, 0%, 3%);
+
+  background: linear-gradient(to right, $outer-green, $inner-green, $inner-green, $outer-green), linear-gradient(to bottom, transparent, $grey);
+
+  background-blend-mode: overlay;
+
+  img {
+    filter: brightness(0.7);
+  }
+}
+
+#fuse {
+  $outer-grey: hsl(0, 0%, 10%);
+  $inner-grey: hsl(0, 0%, 20%);
+  $grey: hsl(0, 0%, 0%);
+
+  background: linear-gradient(to right, $outer-grey, $inner-grey, $inner-grey, $outer-grey), linear-gradient(to bottom, transparent, $grey);
+
+  background-blend-mode: overlay;
+
+
+  img {
+    filter: brightness(0.7);
+
+    transition: filter 0.5s ease;
+    width: 70%
+  }
+}
+
+#fuse:hover {
+  img {
+    filter: brightness(1.1);
+  }
+}
