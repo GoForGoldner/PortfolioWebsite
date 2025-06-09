@@ -87,9 +87,9 @@ export class ZombieWashComponent implements AfterViewInit {
     const loaderUrl = buildUrl + "/Builds.loader.js";
 
     const config = {
-      dataUrl: buildUrl + "/Builds.data.gz",
-      frameworkUrl: buildUrl + "/Builds.framework.js.gz",
-      codeUrl: buildUrl + "/Builds.wasm.gz",
+      dataUrl: buildUrl + "/Builds.data",
+      frameworkUrl: buildUrl + "/Builds.framework.js",
+      codeUrl: buildUrl + "/Builds.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "GoForGoldner",
       productName: "ZombieWash",
