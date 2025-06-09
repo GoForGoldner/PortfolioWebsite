@@ -19,6 +19,10 @@
 
 .content {
   width: clamp(20rem, 60%, 50rem);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 
 .hero {
@@ -27,6 +31,9 @@
 
 .box {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
   outline: 0.3rem solid black;
   border: 0.15rem solid darkgrey;
   padding: 1rem;
@@ -121,7 +128,6 @@ video {
         font-size: 1rem;
       }
     }
-
 
     .content-tab {
       display: none;

@@ -164,9 +164,13 @@ nav-bar {
   }
 }
 
+.leaving-active {
+  animation: hover-leave 0.35s forwards;
+}
+
 #cdrive {
   img {
-    transform: translateY(1.5rem);
+    transform: translateY(5%);
     transition: transform 0.45s ease;
   }
 
@@ -180,14 +184,17 @@ nav-bar {
   background-blend-mode: overlay;
 }
 
-#cdrive:hover {
+#cdrive:hover,
+#cdrive.active {
   img {
-    transform: translateY(0rem);
+    transform: translateY(0);
   }
 }
 
-.leaving-active {
-  animation: hover-leave 0.35s forwards;
+#cdrive.leaving-active {
+  img {
+    transform: translateY(5%);
+  }
 }
 
 #zombie-wash.leaving-active {

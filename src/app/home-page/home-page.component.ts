@@ -75,7 +75,7 @@ export class HomePageComponent implements AfterViewInit {
           if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
             const target = mutation.target as HTMLElement;
             if (target.classList.contains('active')) {
-              this.zombieWashVideoRef.nativeElement.play();
+              try { this.zombieWashVideoRef.nativeElement.play(); } catch (error) { }
             } else {
               // Add delay to match your animation timing
               setTimeout(() => {
