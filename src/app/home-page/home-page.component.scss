@@ -3,7 +3,7 @@
   display: grid;
 
   padding-top: 20dvh;
-  padding-bottom: 10dvh;
+  padding-bottom: 8rem;
 
   place-items: center;
 
@@ -59,10 +59,6 @@
 
     &.active {
       animation: on-hover 0.35s forwards;
-    }
-
-    &.leaving-active {
-      animation: hover-leave 0.35s forwards;
     }
   }
 }
@@ -190,6 +186,14 @@ nav-bar {
   }
 }
 
+.leaving-active {
+  animation: hover-leave 0.35s forwards;
+}
+
+#zombie-wash.leaving-active {
+  filter: blur(0px) brightness(1);
+}
+
 #zombie-wash {
   $outer-purple: hsl(273.96, 92.98%, 11.18%);
   $inner-purple: hsl(273.81, 90%, 22.41%);
@@ -212,7 +216,8 @@ nav-bar {
   background-blend-mode: overlay;
 }
 
-#zombie-wash:hover {
+#zombie-wash:hover,
+#zombie-wash.active {
   video {
     filter: blur(0px) brightness(1);
   }

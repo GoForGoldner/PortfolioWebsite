@@ -70,6 +70,28 @@ export class HomePageComponent implements AfterViewInit {
         }, 350);
       });
 
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            const target = mutation.target as HTMLElement;
+            if (target.classList.contains('active')) {
+              this.zombieWashVideoRef.nativeElement.play();
+            } else {
+              // Add delay to match your animation timing
+              setTimeout(() => {
+                this.zombieWashVideoRef.nativeElement.pause();
+              }, 350);
+            }
+          }
+        });
+      });
+
+      // Start observing
+      observer.observe(projectElement, {
+        attributes: true,
+        attributeFilter: ['class']
+      });
+
     }
   }
 
