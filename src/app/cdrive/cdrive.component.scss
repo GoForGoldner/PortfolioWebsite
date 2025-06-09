@@ -19,11 +19,10 @@ $very-light-blue: hsl(209, 54.76%, 60%);
 
       box-sizing: border-box;
       padding-top: 3rem;
-      margin-bottom: 12rem;
       overflow: hidden;
 
       h1 {
-        @include glowing-text(4rem, $light-blue);
+        @include glowing-text(clamp(2rem, 10vw, 4rem), $light-blue);
       }
 
       img {
@@ -93,30 +92,15 @@ $very-light-blue: hsl(209, 54.76%, 60%);
       }
 
       li {
-        max-width: 65ch;
-        margin: 0 3rem 0 3rem;
-      }
-
-      p {
-        justify-self: left;
-        max-width: 80ch;
-        color: white;
-        padding: 1rem 2rem 1rem 2rem;
+        margin-left: 10%;
       }
     }
 
     .technologies {
       background-color: hsl(40, 5%, 5%);
-
-      li {
-        margin-left: 2rem;
-        padding: 0.1rem;
-        max-width: 70ch;
-      }
     }
 
     .future {
-      list-style: none;
       padding: 1rem 2rem 1rem 2rem;
     }
 
@@ -128,12 +112,6 @@ $very-light-blue: hsl(209, 54.76%, 60%);
         width: 90%;
         justify-self: center;
       }
-
-      p {
-        color: white;
-        padding: 2rem 1rem 2em 3rem;
-        max-width: 75ch;
-      }
     }
 
     .final-design {
@@ -142,19 +120,11 @@ $very-light-blue: hsl(209, 54.76%, 60%);
       background-color: $dark-blue;
       box-shadow: 0.1rem 0.1rem 10rem $dark-blue;
 
-      p {
-        padding: 1rem;
-        max-width: 75ch;
-        color: white;
-      }
-
       li {
-        max-width: 75ch;
         list-style: none;
-        padding: 0.2rem 1rem 0.2rem 1rem;
 
         strong {
-          font-size: 1.1rem;
+          font-size: clamp(0.9rem, 3.6vw, 1.1rem);
         }
       }
     }
@@ -162,22 +132,7 @@ $very-light-blue: hsl(209, 54.76%, 60%);
 }
 
 h2 {
-  @include glowing-text(2.5rem, $light-blue);
-  padding: 1rem 1rem 2rem 1rem;
-}
-
-p {
-  color: hsl(0, 0%, 75%);
-  max-width: 65ch;
-}
-
-p,
-li {
-  font-size: 1rem;
-}
-
-h3 {
-  font-size: 1.1rem;
+  @include glowing-text(clamp(1.5rem, 7vw, 3rem), $light-blue);
 }
 
 img {

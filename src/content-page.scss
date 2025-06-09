@@ -19,17 +19,59 @@
 
 .content {
   width: clamp(20rem, 60%, 50rem);
-
 }
 
-
+.hero {
+  margin-bottom: clamp(2rem, 18%, 10rem);
+}
 
 .box {
+  display: grid;
   outline: 0.3rem solid black;
   border: 0.15rem solid darkgrey;
   padding: 1rem;
-  margin-bottom: 8rem;
+  margin-bottom: clamp(2rem, 18%, 10rem);
   border-radius: 1rem;
+}
+
+p {
+  justify-self: left;
+  max-width: 75ch;
+  color: white;
+  padding: 1rem 5% 1rem 5%;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  text-wrap: pretty;
+}
+
+li {
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  margin-left: 5%;
+  padding: 0.1rem;
+  max-width: 70ch;
+}
+
+h3 {
+  font-size: clamp(0.9rem, 3.3vw, 1.1rem);
+}
+
+h2 {
+  color: white;
+  padding: 1rem 1rem 2rem 1rem;
+  @include glowing-text(clamp(1.5rem, 7vw, 3rem), hsl(0, 0%, 70%));
+}
+
+h1 {
+  height: 5.5rem;
+}
+
+img,
+video {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  justify-self: center;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
 }
 
 // Animations
@@ -63,14 +105,6 @@
 
     .content {
       width: 95%;
-
-      .box {
-        margin-bottom: 2rem;
-      }
-
-      .hero {
-        margin-bottom: 2rem;
-      }
     }
 
     .links {

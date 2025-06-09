@@ -14,7 +14,6 @@
 
     box-sizing: border-box;
     padding-top: 3rem;
-    margin-bottom: 12rem;
     overflow: hidden;
 
     h1 {
@@ -25,14 +24,9 @@
     video {
       margin-top: 3rem;
       width: 100%;
-      height: auto;
       border: 0.15rem solid grey;
       border-radius: 0.5rem;
-      align-self: center;
-      object-fit: contain;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      image-rendering: high-quality;
-      -webkit-backface-visibility: hidden;
+      padding-bottom: 0;
 
       transform: translateY(3rem);
       animation: img-rise 0.65s ease forwards;
@@ -58,35 +52,9 @@
 
     background: linear-gradient(to bottom, $light-blue, $dark-blue);
     box-shadow: 0 0 2rem $very-light-blue;
-
-    ul {
-      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-    }
-
-    li {
-      font-size: 1.2rem;
-      margin-left: 2.5rem;
-      padding: 0.1rem;
-    }
   }
 }
 
-p {
-  padding: 1rem 2.5rem 1rem 2.5rem;
-  text-wrap: pretty;
-  max-width: 65ch;
-}
-
 h2 {
-  @include glowing-text(2.5rem, hsl(0, 0%, 30%));
-}
-
-img {
-  width: 95%;
-  height: 100%;
-  object-fit: cover;
-
-  padding: 1.5rem;
-  justify-self: center;
-  border-radius: 2rem;
+  @include glowing-text(clamp(1.5rem, 7vw, 3rem), hsl(0, 0%, 30%));
 }

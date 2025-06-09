@@ -20,7 +20,38 @@ export class HomePageComponent implements AfterViewInit {
       this.addVideoAnimation();
       this.addPageLeaveAnimation();
     }, 100);
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile && isPlatformBrowser(this.platformId)) {
+      setTimeout(() => this.setUpContentTab(), 100);
+    }
   }
+
+  private setUpContentTab() {
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY + 300;
+      sections.forEach(section => {
+        const offset = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id') ?? '';
+        if (scrollPosition >= offset && scrollPosition < offset + height && id) {
+          sections.forEach(sectionAll => {
+            if (sectionAll != section && sectionAll.classList.contains('active')) {
+              sectionAll.classList.remove('active');
+              sectionAll.classList.add('leaving-active');
+              // Remove the leaving class after animation completes
+              setTimeout(() => sectionAll.classList.remove('leaving-active'), 350);
+            }
+          });
+          section.classList.add('active');
+        }
+      });
+    });
+  }
+
 
   private addVideoAnimation() {
     if (isPlatformBrowser(this.platformId)) {

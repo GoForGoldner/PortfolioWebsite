@@ -30,27 +30,28 @@
         <h2>Overview</h2>
         <img src="Fuse/FuseOutputImage.png" alt>
         <p>FuseFS is a custom filesystem built with the FUSE (Filesystem in Userspace) framework that enables users to
-          create, modify, and manipulate files and directories through standard terminal commands. By operating in
-          userspace rather than kernel space, FuseFS offers easier development and debugging while maintaining
-          compatibility with existing applications.</p>
+          create, modify, and manipulate files and directories through standard terminal commands.</p>
+        <p>By operating in userspace rather than kernel space, FuseFS offers easier development and debugging while
+          maintaining compatibility with existing applications.</p>
       </section>
       <section id="technical-approach" class="box">
         <h2>Technical Approach</h2>
-        <img src="Fuse/FuseServerImage.png" alt>
         <p>Implemented in C/C++, FuseFS integrates with the Linux VFS Layer and features custom inode management,
-          efficient data caching, and memory-mapped operation support. The architecture uses a layered design with
-          separate components for FUSE interface handling, metadata management, data storage, caching, and diagnostics.
-          This separation allows for incremental development and thorough validation of each component.</p>
+          efficient data caching, and memory-mapped operation support.</p>
+        <img src="Fuse/FuseServerImage.png" alt>
+        <p>The architecture uses a layered design with separate components for FUSE interface handling, metadata
+          management, data storage, caching, and diagnostics. This separation allows for incremental development and
+          thorough validation of each component.</p>
       </section>
       <section id="challenges" class="box">
         <h2>Challenges</h2>
         <img src="Fuse/FuseCodingImage.png" alt>
         <p>Creating a comprehensive testing framework was the most substantial challenge, as small directory structure
-          changes could have cascading effects throughout the codebase. Testing needed to cover isolated operations,
-          operation sequences, concurrent access, recovery from termination, and performance under various loads.
-          Additional challenges included maintaining consistency across operations, performance optimization, and
-          ensuring
-          compatibility with standard tools like rsync and tar.</p>
+          changes could have cascading effects throughout the codebase.</p>
+        <p>Testing needed to cover isolated operations, operation sequences, concurrent access, recovery from
+          termination, and performance under various loads. Additional challenges included maintaining consistency
+          across operations, performance optimization, and ensuring compatibility with standard tools like rsync and
+          tar.</p>
       </section>
       <section id="key-achievements" class="box">
         <h2>Key Achievements</h2>

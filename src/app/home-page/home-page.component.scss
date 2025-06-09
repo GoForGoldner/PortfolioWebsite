@@ -56,6 +56,14 @@
     &:not(:hover) {
       animation: hover-leave 0.35s forwards;
     }
+
+    &.active {
+      animation: on-hover 0.35s forwards;
+    }
+
+    &.leaving-active {
+      animation: hover-leave 0.35s forwards;
+    }
   }
 }
 
