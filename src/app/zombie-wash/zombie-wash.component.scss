@@ -1,0 +1,180 @@
+@use '../../styles.scss' as *;
+@use '../../content-page.scss';
+
+$grey: hsl(0, 0%, 5%);
+$very-light-purple: hsl(274, 91.5%, 40%);
+$light-purple: hsl(280 80% 40.5%);
+$outer-purple: hsl(273.96, 92.98%, 11.18%);
+$inner-purple: hsl(273.81, 90%, 22.41%);
+
+.main {
+  @include circular-gradient($outer-purple, $grey);
+  color: white;
+
+  opacity: 0.5;
+  animation: fade-in 0.4s ease forwards;
+
+  .content-tab {
+    right: 2.5rem;
+  }
+
+  .content {
+    width: clamp(20rem, 60%, 50rem);
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      box-sizing: border-box;
+      padding-top: 3rem;
+      margin-bottom: 12rem;
+      overflow: hidden;
+
+      h1 {
+        @include glowing-text(4rem, $very-light-purple);
+      }
+
+      // All of the Unity window related stuff is below
+    }
+  }
+
+  #overview {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  #technical-implementation {
+    $light-grey: hsl(0, 0%, 15%);
+    $dark-grey: hsl(0, 0%, 8%);
+    background: linear-gradient(to bottom, $light-grey, $dark-grey);
+  }
+
+  #challenges {
+    $light-green: hsl(137, 44%, 15%);
+    $dark-green: hsl(137, 44%, 8%);
+    background: linear-gradient(to bottom, $light-green, $dark-green);
+  }
+
+  #key-achievements {
+    $light-purple: hsl(260, 40%, 15%);
+    $dark-purple: hsl(260, 40%, 8%);
+    background: linear-gradient(to bottom, $light-purple, $dark-purple);
+  }
+
+  #takeaways {
+    $light-black: hsl(0, 0%, 10%);
+    $dark-black: hsl(0, 0%, 5%);
+    background: linear-gradient(to bottom, $light-black, $dark-black);
+  }
+}
+
+p {
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  text-wrap: pretty;
+  max-width: 65ch;
+  font-size: 1.1rem;
+}
+
+h2 {
+  @include glowing-text(2.5rem, hsl(0, 0%, 70%));
+  padding-bottom: 2rem;
+}
+
+img,
+video {
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+
+  padding: 1.5rem;
+  justify-self: center;
+  border-radius: 2rem;
+}
+
+#unity-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-top: 3rem;
+  border: 0.2rem solid grey;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  transform: translateY(3rem);
+  animation: img-rise 0.65s ease forwards;
+}
+
+#unity-container.unity-desktop {}
+
+#unity-container.unity-mobile {
+  position: fixed;
+  width: 100%;
+  height: 100%
+}
+
+#unity-canvas {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #231F20
+}
+
+.unity-mobile #unity-canvas {
+  width: 100%;
+  height: 100%
+}
+
+#unity-loading-bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none
+}
+
+#unity-progress-bar-empty {
+  width: 141px;
+  height: 18px;
+  margin-top: 10px;
+  margin-left: 6.5px;
+  background: url('/ZombieWash/progress-bar-empty-dark.png') no-repeat center
+}
+
+#unity-progress-bar-full {
+  width: 0%;
+  height: 18px;
+  margin-top: 10px;
+  background: url('/ZombieWash/progress-bar-full-dark.png') no-repeat center
+}
+
+#unity-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 10%);
+}
+
+.unity-mobile #unity-footer {
+  display: none
+}
+
+#unity-build-title {
+  padding: 0.3rem 0.3rem 0.3rem 2rem;
+  font-size: 1.1rem;
+}
+
+#unity-fullscreen-button {
+  cursor: pointer;
+  float: right;
+  width: 38px;
+  height: 38px;
+  background: url('/ZombieWash/fullscreen-button.png') no-repeat center
+}
+
+#unity-warning {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%);
+  background: white;
+  padding: 10px;
+  display: none
+}

@@ -1,0 +1,67 @@
+<div class="body">
+  <div class="main">
+    <back-to-home-page-button />
+    <nav class="content-tab">
+      <span>Content</span>
+      <ul>
+        <li><a class="active" [routerLink]="['/fuse']" [fragment]="'fuse'">Fuse</a></li>
+        <li><a [routerLink]="['/fuse']" [fragment]="'overview'">Overview</a></li>
+        <li><a [routerLink]="['/fuse']" [fragment]="'technical-approach'">Technical Approach</a></li>
+        <li><a [routerLink]="['/fuse']" [fragment]="'challenges'">Challenges</a></li>
+        <li><a [routerLink]="['/fuse']" [fragment]="'key-achievements'">Key Achievements</a></li>
+      </ul>
+    </nav>
+
+    <div class="links">
+      <a href="https://github.com/GoForGoldner/FuseFS" rel="noopener noreferrer" target="_blank">Github <svg
+          xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#FFFFFF">
+          <path
+            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
+        </svg> </a>
+    </div>
+
+
+    <div class="content">
+      <section id="fuse" class="hero">
+        <h1>FUSE Filesystem</h1>
+        <video src="Fuse/FuseVideo720p.mp4" type="video/mp4" autoplay muted></video>
+      </section>
+      <section id="overview" class="box">
+        <h2>Overview</h2>
+        <img src="Fuse/FuseOutputImage.png" alt>
+        <p>FuseFS is a custom filesystem built with the FUSE (Filesystem in Userspace) framework that enables users to
+          create, modify, and manipulate files and directories through standard terminal commands. By operating in
+          userspace rather than kernel space, FuseFS offers easier development and debugging while maintaining
+          compatibility with existing applications.</p>
+      </section>
+      <section id="technical-approach" class="box">
+        <h2>Technical Approach</h2>
+        <img src="Fuse/FuseServerImage.png" alt>
+        <p>Implemented in C/C++, FuseFS integrates with the Linux VFS Layer and features custom inode management,
+          efficient data caching, and memory-mapped operation support. The architecture uses a layered design with
+          separate components for FUSE interface handling, metadata management, data storage, caching, and diagnostics.
+          This separation allows for incremental development and thorough validation of each component.</p>
+      </section>
+      <section id="challenges" class="box">
+        <h2>Challenges</h2>
+        <img src="Fuse/FuseCodingImage.png" alt>
+        <p>Creating a comprehensive testing framework was the most substantial challenge, as small directory structure
+          changes could have cascading effects throughout the codebase. Testing needed to cover isolated operations,
+          operation sequences, concurrent access, recovery from termination, and performance under various loads.
+          Additional challenges included maintaining consistency across operations, performance optimization, and
+          ensuring
+          compatibility with standard tools like rsync and tar.</p>
+      </section>
+      <section id="key-achievements" class="box">
+        <h2>Key Achievements</h2>
+        <img src="Fuse/FuseInitImage.png" alt>
+        <ul>
+          <li>Full filesystem functionality with proper concurrency handling</li>
+          <li>Performance optimization through strategic caching</li>
+          <li>Comprehensive logging and diagnostics</li>
+          <li>Seamless integration with existing applications</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

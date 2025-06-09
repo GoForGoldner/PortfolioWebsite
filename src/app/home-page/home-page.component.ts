@@ -68,13 +68,18 @@ export class HomePageComponent implements AfterViewInit {
   }
 
   public loadComingSoonPage() {
-    setTimeout(() =>
-      this.router.navigate(['/coming-soon']),
-      250);
+    setTimeout(() => this.router.navigate(['coming-soon']), 250);
   }
 
   public loadCDrivePage() {
-    setTimeout(() =>
-      this.router.navigate(['cdrive']), 250);
+    setTimeout(() => this.router.navigate(['cdrive']), 250);
+  }
+
+  public loadZombieWashPage() {
+    setTimeout(() => this.router.navigate(['zombiewash']), 250);
+  }
+
+  public loadFusePage() {
+    setTimeout(() => this.router.navigate(['fuse']), 250);
   }
 }

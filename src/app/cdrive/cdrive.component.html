@@ -1,136 +1,146 @@
-<div class="main">
-  <back-to-home-page-button />
-  <div class="links">
-    <a href="https://cdrivecpp.netlify.app/" rel="noopener noreferrer" target="_blank">CDrive.netlify.app <svg
-        xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#FFFFFF">
-        <path
-          d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
-      </svg></a>
-    <a href="https://github.com/GoForGoldner/CDrive-Cpp_File_Sharing_Website" rel="noopener noreferrer"
-      target="_blank">Github <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px"
-        fill="#FFFFFF">
-        <path
-          d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
-      </svg></a>
-  </div>
-  <nav class="content-tab">
-    <span>Content</span>
-    <ul>
-      <li><a class="active" [routerLink]="['/cdrive']" [fragment]="'cdrive'">CDrive</a></li>
-      <li><a [routerLink]="['/cdrive']" [fragment]="'overview'">Overview</a></li>
-      <li><a [routerLink]="['/cdrive']" [fragment]="'technologies'">Technologies</a></li>
-      <li><a [routerLink]="['/cdrive']" [fragment]="'problem'">The Problem</a></li>
-      <li><a [routerLink]="['/cdrive']" [fragment]="'user-experience'">User Experience</a></li>
-      <li><a [routerLink]="['/cdrive']" [fragment]="'final-design'">Final Design</a></li>
-      <li><a [routerLink]="['/cdrive']" [fragment]="'future'">Future</a></li>
-    </ul>
-  </nav>
+<div class="body">
+  <div class="main">
+    <back-to-home-page-button />
 
-  <div class="content">
-    <section id="cdrive" class="hero">
-      <h1>CDrive</h1>
-      <img src="CDrive/HomePageDesktop.png" alt>
-    </section>
+    <div class="links">
+      <a href="https://cdrivecpp.netlify.app/" rel="noopener noreferrer" target="_blank">CDrive.netlify.app <svg
+          xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#FFFFFF">
+          <path
+            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
+        </svg></a>
+      <a href="https://github.com/GoForGoldner/CDrive-Cpp_File_Sharing_Website" rel="noopener noreferrer"
+        target="_blank">Github <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960"
+          width="22px" fill="#FFFFFF">
+          <path
+            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
+        </svg></a>
+    </div>
 
-    <section id="overview" class="overview blue-box">
-      <img src="CDrive/UserPageMobile.png" alt>
-      <div class="text">
-        <h2>Overview</h2>
-        <p>CDrive is a comprehensive online file hosting and compilation service specifically designed for C++
-          developers. Unlike traditional IDEs that require installation, our platform allows users to create, import,
-          edit, and execute C++ code entirely through a web browser.
-        </p>
-        <p> With real-time compilation feedback and full support for standard
-          input/output operations, CDrive bridges the gap between desktop development environments and cloud-based
-          coding solutions, making C++ programming accessible from any device with an internet connection.</p>
-        <div id="highlights" class="highlights">
-          <h2>Highlights</h2>
-          <h3>Seamless File Management:</h3>
-          <p>Upload existing projects or create new files directly in your browser</p>
-          <h3>Real-Time Compilation:</h3>
-          <p>
-            Instantly compile and debug your C++ code without switching applications
+    <nav class="content-tab">
+      <span>Content</span>
+      <ul>
+        <li><a class="active" [routerLink]="['/cdrive']" [fragment]="'cdrive'">CDrive</a></li>
+        <li><a [routerLink]="['/cdrive']" [fragment]="'overview'">Overview</a></li>
+        <li><a [routerLink]="['/cdrive']" [fragment]="'technologies'">Technologies</a></li>
+        <li><a [routerLink]="['/cdrive']" [fragment]="'problem'">The Problem</a></li>
+        <li><a [routerLink]="['/cdrive']" [fragment]="'user-experience'">User Experience</a></li>
+        <li><a [routerLink]="['/cdrive']" [fragment]="'final-design'">Final Design</a></li>
+        <li><a [routerLink]="['/cdrive']" [fragment]="'future'">Future</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <section id="cdrive" class="hero">
+        <h1>CDrive</h1>
+        <img src="CDrive/HomePageDesktop.png" alt>
+      </section>
+
+      <section id="overview" class="overview box">
+        <img src="CDrive/UserPageMobile.png" alt>
+        <div class="text">
+          <h2>Overview</h2>
+          <p>CDrive is a comprehensive online file hosting and compilation service specifically designed for C++
+            developers. Unlike traditional IDEs that require installation, our platform allows users to create, import,
+            edit, and execute C++ code entirely through a web browser.
           </p>
-          <h3>Full I/O Support:</h3>
-          <p>
-            Complete stdin/stdout functionality
-          </p>
-          <h3>Compadibility</h3>
-          <p>Code from any device - Windows, macOS, Linux, tablets, or smartphones</p>
+          <p> With real-time compilation feedback and full support for standard
+            input/output operations, CDrive bridges the gap between desktop development environments and cloud-based
+            coding solutions, making C++ programming accessible from any device with an internet connection.</p>
+          <div id="highlights" class="highlights">
+            <h2>Highlights</h2>
+            <h3>Seamless File Management:</h3>
+            <p>Upload existing projects or create new files directly in your browser</p>
+            <h3>Real-Time Compilation:</h3>
+            <p>
+              Instantly compile and debug your C++ code without switching applications
+            </p>
+            <h3>Full I/O Support:</h3>
+            <p>
+              Complete stdin/stdout functionality
+            </p>
+            <h3>Compadibility</h3>
+            <p>Code from any device - Windows, macOS, Linux, tablets, or smartphones</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="technologies" class="technologies blue-box">
-      <h2>Technologies</h2>
-      <ul>
-        <li>Frontend: <strong>Angular</strong> framework providing a responsive and intuitive user interface
-        </li>
-        <li>Backend: <strong>Spring Boot</strong> powering our <strong>RESTful API</strong> and WebSocket connections
-        </li>
-        <li>Containerization: <strong>Docker</strong> ensuring consistent compilation environments</li>
-        <li>Database: <strong>PostgreSQL</strong> storing user accounts, projects, and file metadata</li>
-        <li>Cloud Infrastructure: <strong>AWS Lightsail</strong> hosting our backend services</li>
-        <li>Frontend Hosting: <strong>Netlify</strong> delivering fast, global CDN distribution</li>
-        <li>IDE Integration: <strong>Monaco Editor</strong> (the engine behind VS Code) offering syntax highlighting and
-          intelligent code
-          completion</li>
-      </ul>
-    </section>
+      <section id="technologies" class="technologies box">
+        <h2>Technologies</h2>
+        <ul>
+          <li>Frontend: <strong>Angular</strong> framework providing a responsive and intuitive user interface
+          </li>
+          <li>Backend: <strong>Spring Boot</strong> powering our <strong>RESTful API</strong> and WebSocket connections
+          </li>
+          <li>Containerization: <strong>Docker</strong> ensuring consistent compilation environments</li>
+          <li>Database: <strong>PostgreSQL</strong> storing user accounts, projects, and file metadata</li>
+          <li>Cloud Infrastructure: <strong>AWS Lightsail</strong> hosting our backend services</li>
+          <li>Frontend Hosting: <strong>Netlify</strong> delivering fast, global CDN distribution</li>
+          <li>IDE Integration: <strong>Monaco Editor</strong> (the engine behind VS Code) offering syntax highlighting
+            and
+            intelligent code
+            completion</li>
+        </ul>
+      </section>
 
-    <section id="problem" class="problem blue-box">
-      <h2>The Problem</h2>
-      <img src="CDrive/CodingPageTerminalQuestionDesktop.png" alt="A terminal asking the question 'What is your name?'">
-      <p>C++ developers faced significant limitations when working with C++ in browser-based environments. Existing
-        online
-        compilers lacked critical functionality: </p>
-      <ul>
-        <li>Most services either store or compile C++ files, leading to multiple services needing to be required.</li>
-        <li>Code sharing often required cumbersome workarounds</li>
-        <li>Restricted access to compilation flags and optimization settings</li>
-      </ul>
-      <p>
-        We identified these pain points and built CDrive to provide a more complete solution. By implementing WebSocket
-        connections between our compilation service and the client interface, we established bidirectional communication
-        that enables true interactive programming with full support for standard input/output operations.
-      </p>
-    </section>
+      <section id="problem" class="problem box">
+        <h2>The Problem</h2>
+        <img src="CDrive/CodingPageTerminalQuestionDesktop.png"
+          alt="A terminal asking the question 'What is your name?'">
+        <p>C++ developers faced significant limitations when working with C++ in browser-based environments. Existing
+          online
+          compilers lacked critical functionality: </p>
+        <ul>
+          <li>Most services either store or compile C++ files, leading to multiple services needing to be required.</li>
+          <li>Code sharing often required cumbersome workarounds</li>
+          <li>Restricted access to compilation flags and optimization settings</li>
+        </ul>
+        <p>
+          We identified these pain points and built CDrive to provide a more complete solution. By implementing
+          WebSocket
+          connections between our compilation service and the client interface, we established bidirectional
+          communication
+          that enables true interactive programming with full support for standard input/output operations.
+        </p>
+      </section>
 
-    <section id="user-experience" class="user-experience blue-box">
-      <h2>User Experience</h2>
-      <p>For CDrive, user experience was the top priority. Offering intuitive file management that lets you easily
-        create new files or import existing projects with drag-and-drop functionality. </p>
-      <img src="CDrive/UserPageDesktop.png" alt>
-      <p> Thanks to our
-        responsive design, you can enjoy a consistent experience across devices of all sizes.</p>
-    </section>
+      <section id="user-experience" class="user-experience box">
+        <h2>User Experience</h2>
+        <p>For CDrive, user experience was the top priority. Offering intuitive file management that lets you easily
+          create new files or import existing projects with drag-and-drop functionality. </p>
+        <img src="CDrive/UserPageDesktop.png" alt>
+        <p> Thanks to our
+          responsive design, you can enjoy a consistent experience across devices of all sizes.</p>
+      </section>
 
-    <section id="final-design" class="final-design blue-box">
-      <h2>Final Design</h2>
-      <img src="CDrive/CodingPageDesktop.png" alt>
-      <p>I chose Monaco as the code editor for its robust syntax highlighting, autocomplete capabilities, and extensive
-        language support. The final design had lot of incredible features such as:
-      </p>
-      <ul>
-        <li>1. <strong>Integrated Terminal:</strong> Execute shell commands and interact with your program directly in
-          the browser
-        </li>
-        <li>2. <strong>Responsive Layout:</strong> Automatically adjusts to provide optimal experience on devices of any
-          size
-        </li>
-        <li>3. <strong>File Importing:</strong> Easily drag and drop files into the website at any time</li>
-      </ul>
-    </section>
+      <section id="final-design" class="final-design box">
+        <h2>Final Design</h2>
+        <img src="CDrive/CodingPageDesktop.png" alt>
+        <p>I chose Monaco as the code editor for its robust syntax highlighting, autocomplete capabilities, and
+          extensive
+          language support. The final design had lot of incredible features such as:
+        </p>
+        <ul>
+          <li>1. <strong>Integrated Terminal:</strong> Execute shell commands and interact with your program directly in
+            the browser
+          </li>
+          <li>2. <strong>Responsive Layout:</strong> Automatically adjusts to provide optimal experience on devices of
+            any
+            size
+          </li>
+          <li>3. <strong>File Importing:</strong> Easily drag and drop files into the website at any time</li>
+        </ul>
+      </section>
 
-    <section id="future" class="future blue-box">
-      <h2>Future</h2>
-      <ul>
-        <li>In depth version history.</li>
-        <li>Integration with popular version control systems (GitHub, GitLab)
-        </li>
-        <li>Expanded library support for specialized C++ frameworks</li>
-        <li>Collaborative editing with real-time cursor sharing.</li>
-      </ul>
-    </section>
+      <section id="future" class="future box">
+        <h2>Future</h2>
+        <ul>
+          <li>In depth version history.</li>
+          <li>Integration with popular version control systems (GitHub, GitLab)
+          </li>
+          <li>Expanded library support for specialized C++ frameworks</li>
+          <li>Collaborative editing with real-time cursor sharing.</li>
+        </ul>
+      </section>
+    </div>
   </div>
 </div>

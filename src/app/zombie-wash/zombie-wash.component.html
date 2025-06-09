@@ -1,0 +1,95 @@
+<div class="body">
+  <div class="main">
+    <div class="content">
+      <back-to-home-page-button />
+      <nav class="content-tab">
+        <span>Content</span>
+        <ul>
+          <li><a class="active" [routerLink]="['/zombiewash']" [fragment]="'zombiewash'">ZombieWash</a></li>
+          <li><a [routerLink]="['/zombiewash']" [fragment]="'overview'">Overview</a></li>
+          <li><a [routerLink]="['/zombiewash']" [fragment]="'technical-implementation'">Technical Approach</a></li>
+          <li><a [routerLink]="['/zombiewash']" [fragment]="'challenges'">Challenges</a>
+          </li>
+          <li><a [routerLink]="['/zombiewash']" [fragment]="'key-achievements'">Key Achievements</a></li>
+          <li><a [routerLink]="['/zombiewash']" [fragment]="'takeaways'">Takeaways</a></li>
+        </ul>
+      </nav>
+
+      <section id="zombiewash" class="hero">
+        <h1>ZombieWash</h1>
+
+        <div id="unity-container" class="unity-desktop">
+          <canvas id="unity-canvas" tabindex="-1"></canvas>
+          <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+              <div id="unity-progress-bar-full"></div>
+            </div>
+          </div>
+          <div id="unity-warning"> </div>
+          <div id="unity-footer">
+            <div id="unity-build-title">Use fullscreen button for a better experience!</div>
+            <div id="unity-fullscreen-button"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="box">
+        <h2>Overview</h2>
+        <p>ZombieWash is a turn-based task management game where players satiate the needs of the undead during a zombie
+          apocalypse. Built in Unity, the game challenges players to balance limited resources and time while managing
+          their zombie "clients."</p>
+        <img src="ZombieWash/ZombieWashGreyImage.png" alt="">
+        <p>Instead of fighting zombies, you're running a service facility for them, creating a uniquely humorous take on
+          the post-apocalyptic genre. Players use a card-based action system to perform different treatments while
+          strategically planning each turn to maximize efficiency and survival.</p>
+      </section>
+
+      <section id="technical-implementation" class="box">
+        <h2>Technical Implementation</h2>
+        <p>ZombieWash is a turn-based task management game where players satiate the needs of the undead during a zombie
+          apocalypse. Built in Unity, the game challenges players to balance limited resources and time while managing
+          their zombie "clients."</p>
+        <img src="ZombieWash/ZombieWashBasicGameDemo.gif" alt="A gif containing a past iteration of the game.">
+        <p>Instead of fighting zombies, you're running a service facility for them, creating a uniquely humorous take on
+          the post-apocalyptic genre. Players use a card-based action system to perform different treatments while
+          strategically planning each turn to maximize efficiency and survival.</p>
+      </section>
+
+      <section id="challenges" class="box">
+        <h2>Challenges</h2>
+        <p>Creating the card system was the most challenging aspect of development. We needed a flexible framework that
+          could handle various card effects while maintaining game balance and preventing scenarios that were impossible
+          to win.</p>
+        <img src="ZombieWash/ZombieWashGreenImage.png" alt="">
+        <p>Additionally, optimizing for WebGL presented significant hurdles as initial builds suffered from long loading
+          times and memory issues. We implemented asset compression, reduced draw calls, and asynchronous loading to
+          achieve smooth browser-based performance without requiring downloads.</p>
+      </section>
+
+      <section id="key-achievements" class="box">
+        <h2>Key Achievements</h2>
+        <p>My WebGL optimization achieved a 65% reduction in loading time with stable cross-browser performance.
+          ZombieWash successfully implements a unique gameplay concept that subverts traditional zombie game tropes. The
+          procedural zombie generation system creates enough variety to keep gameplay fresh across multiple
+          playthroughs.</p>
+        <video src="ZombieWash/ZombieWashDemoVideo.mp4" autoplay muted playsinline loop volume="0"></video>
+        <p>The procedural zombie generation system creates enough variety to keep gameplay fresh across multiple
+          playthroughs, ensuring players experience different challenges each time they play.</p>
+      </section>
+
+      <section id="takeaways" class="box">
+        <h2>Takeaways</h2>
+        <img src="ZombieWash/ZombieWashBasicMovementScript.gif" alt>
+        <p> Modular code architecture proved essential during development, allowing us to modify components with minimal
+          coupling between systems. This approach facilitated rapid iteration based on playtest feedback.</p>
+        <p>The four playtest sessions we conducted revealed unexpected player behaviors and usability issues,
+          particularly
+          around card mechanics, leading to improved tutorials and visual feedback for a more intuitive player
+          experience.
+        </p>
+      </section>
+
+    </div>
+  </div>
+</div>

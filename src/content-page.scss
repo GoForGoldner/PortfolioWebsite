@@ -1,0 +1,123 @@
+@use 'styles.scss' as *;
+
+.body {
+  background-color: hsl(0, 0%, 5%);
+}
+
+.main {
+  place-items: center;
+  padding-bottom: 2rem;
+  opacity: 0.5;
+  animation: fade-in 0.4s ease forwards;
+
+  back-to-home-page-button {
+    position: fixed;
+    left: 2rem;
+    top: 8rem;
+  }
+}
+
+.content {
+  width: clamp(20rem, 60%, 50rem);
+
+}
+
+
+
+.box {
+  outline: 0.3rem solid black;
+  border: 0.15rem solid darkgrey;
+  padding: 1rem;
+  margin-bottom: 8rem;
+  border-radius: 1rem;
+}
+
+// Animations
+@keyframes fade-in {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes img-rise {
+  from {
+    transform: translateY(3rem);
+  }
+
+  to {
+    transform: translateY(0rem);
+  }
+}
+
+// Media Queries
+@media (max-width: 1170px) {
+  .main {
+    back-to-home-page-button {
+      position: absolute;
+      left: 1rem;
+    }
+
+    .content {
+      width: 95%;
+
+      .box {
+        margin-bottom: 2rem;
+      }
+
+      .hero {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .links {
+      position: absolute;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: calc(95% - 7.5rem);
+      left: 7.5rem;
+
+      top: 8rem;
+
+      a {
+        font-size: 1rem;
+      }
+    }
+
+
+    .content-tab {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .main {
+    .overview {
+      flex-direction: column;
+
+      img {
+        align-self: center;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media(max-width: 400px) {
+  .main {
+    back-to-home-page-button {
+      display: none;
+    }
+
+    .links {
+      width: 90%;
+      left: 5%;
+    }
+  }
+}
