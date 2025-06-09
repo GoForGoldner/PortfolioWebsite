@@ -19,10 +19,6 @@
 
 .content {
   width: clamp(20rem, 60%, 50rem);
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
 }
 
 .hero {
@@ -30,9 +26,8 @@
 }
 
 .box {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
 
   outline: 0.3rem solid black;
   border: 0.15rem solid darkgrey;
@@ -41,8 +36,8 @@
   border-radius: 1rem;
 }
 
-p {
-  justify-self: left;
+p,
+ul {
   max-width: 75ch;
   color: white;
   padding: 1rem 5% 1rem 5%;
@@ -74,10 +69,10 @@ h1 {
 img,
 video {
   width: 90%;
+  margin: 0 auto;
   height: 100%;
   object-fit: cover;
   justify-self: center;
-  padding-bottom: 1rem;
   border-radius: 0.5rem;
 }
 
