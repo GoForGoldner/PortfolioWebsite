@@ -32,7 +32,7 @@ export class HomePageComponent implements AfterViewInit {
     const sections = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY + 300;
+      const scrollPosition = window.scrollY + 400;
       sections.forEach(section => {
         const offset = section.offsetTop;
         const height = section.offsetHeight;
@@ -98,7 +98,7 @@ export class HomePageComponent implements AfterViewInit {
   private addPageLeaveAnimation(): void {
     if (isPlatformBrowser(this.platformId)) {
       // Selects all the divs with a project class name!
-      let items = document.querySelectorAll('div.project');
+      let items = document.querySelectorAll('.main section');
       let navBar = document.querySelector('nav-bar');
 
       items.forEach(item => {
