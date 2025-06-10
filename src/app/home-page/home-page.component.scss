@@ -178,9 +178,9 @@ nav-bar {
   $outer-blue: hsl(209.45, 66.27%, 11.27%);
   $inner-blue: hsl(209.13, 54.76%, 40.59%);
   $grey: hsl(0 0% 3%);
+
   background: linear-gradient(to right, $outer-blue, $inner-blue, $inner-blue, $outer-blue),
   linear-gradient(to bottom, transparent, $grey);
-
   background-blend-mode: overlay;
 }
 
@@ -216,7 +216,6 @@ nav-bar {
     transition: filter 0.35s ease;
   }
 
-
   background: linear-gradient(to right, $outer-purple, $inner-purple, $inner-purple, $outer-purple),
   linear-gradient(to bottom, transparent, $grey);
 
@@ -229,7 +228,6 @@ nav-bar {
     filter: blur(0px) brightness(1);
   }
 }
-
 
 #surround {
   $outer-green: hsl(104, 64%, 15%);
@@ -254,18 +252,27 @@ nav-bar {
 
   background-blend-mode: overlay;
 
-
   img {
     filter: brightness(0.7);
 
-    transition: filter 0.5s ease;
-    width: 70%
+    transition: all 0.35s ease;
+
+    width: 70%;
   }
 }
 
-#fuse:hover {
+#fuse:hover,
+#fuse.active {
   img {
-    filter: brightness(1.1);
+    scale: 1.07;
+    filter: brightness(1.0);
+  }
+}
+
+#fuse.leaving-active {
+  img {
+    scale: 1;
+    filter: brightness(0.7);
   }
 }
 
