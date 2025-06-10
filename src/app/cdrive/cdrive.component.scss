@@ -44,34 +44,32 @@ $very-light-blue: hsl(209, 54.76%, 60%);
       background-color: rgba(0, 0, 0, 0.4);
 
       img {
-        max-width: 50%;
-        min-width: 0;
-        height: auto;
-        aspect-ratio: 624/1021;
-        border-radius: 1rem;
         object-fit: cover;
+        width: 100%;
+        border: none;
       }
 
-      h2,
       h3 {
-        padding: 0.3rem;
+        padding: 0.4rem;
         text-align: left;
         color: white;
         font-size: 1.1rem;
       }
 
-      .text {
-        flex: 1;
-        min-width: 0;
+      h2 {
+        font-size: 2.5rem;
+        padding: 0.3rem;
+        text-align: center;
+      }
 
+      .text {
         p {
           padding: 0.55rem;
         }
 
         .highlights {
           p {
-            padding-top: 0.1rem;
-            padding-bottom: 0.1rem;
+            margin-left: 2%;
           }
 
           h3:first-of-type {

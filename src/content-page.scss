@@ -36,8 +36,7 @@
   border-radius: 1rem;
 }
 
-p,
-ul {
+p {
   max-width: 75ch;
   color: white;
   padding: 1rem 5% 1rem 5%;
@@ -98,7 +97,7 @@ video {
 }
 
 // Media Queries
-@media (max-width: 1170px) {
+@media (max-width: 1080px) {
   .main {
     back-to-home-page-button {
       position: absolute;
@@ -126,20 +125,6 @@ video {
 
     .content-tab {
       display: none;
-    }
-  }
-}
-
-@media (max-width: 720px) {
-  .main {
-    .overview {
-      flex-direction: column;
-
-      img {
-        align-self: center;
-        width: 100%;
-        max-width: 100%;
-      }
     }
   }
 }

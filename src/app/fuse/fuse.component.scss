@@ -52,6 +52,11 @@
 
     background: linear-gradient(to bottom, $light-blue, $dark-blue);
     box-shadow: 0 0 2rem $very-light-blue;
+
+    ul {
+      margin-top: 3%;
+      margin-left: 3%;
+    }
   }
 }
 
