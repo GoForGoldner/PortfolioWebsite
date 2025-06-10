@@ -303,3 +303,9 @@ nav-bar {
     width: 71.5%;
   }
 }
+
+@media(max-width: 1170px) {
+  .main .project {
+    width: 93% !important;
+  }
+}
