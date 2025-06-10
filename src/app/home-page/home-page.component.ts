@@ -102,20 +102,22 @@ export class HomePageComponent implements AfterViewInit {
       let navBar = document.querySelector('nav-bar');
 
       items.forEach(item => {
-        item.addEventListener('click', () => {
-          items.forEach(allItems => {
-            if (!allItems.classList.contains('animate-leave')) {
-              console.log('Adding animate-leave to:', allItems.id);
-              allItems.classList.add('animate-leave');
-              // Verify class was added
-              console.log('Class list after:', allItems.classList.contains('animate-leave'));
-            }
-          });
+        if (item.id != 'hero') {
+          item.addEventListener('click', () => {
+            items.forEach(allItems => {
+              if (!allItems.classList.contains('animate-leave')) {
+                console.log('Adding animate-leave to:', allItems.id);
+                allItems.classList.add('animate-leave');
+                // Verify class was added
+                console.log('Class list after:', allItems.classList.contains('animate-leave'));
+              }
+            });
 
-          if (!navBar?.classList.contains('animate-nav-links')) {
-            navBar?.classList.add('animate-nav-links');
-          }
-        })
+            if (!navBar?.classList.contains('animate-nav-links')) {
+              navBar?.classList.add('animate-nav-links');
+            }
+          })
+        }
       });
     }
   }
