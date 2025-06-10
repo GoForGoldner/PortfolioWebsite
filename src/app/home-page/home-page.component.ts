@@ -60,9 +60,9 @@ export class HomePageComponent implements AfterViewInit {
       const projectElement = this.zombieWashVideoRef.nativeElement.parentElement;
       if (!projectElement) return;
 
-      projectElement.addEventListener('mouseenter', () =>
-        this.zombieWashVideoRef.nativeElement.play()
-      );
+      projectElement.addEventListener('mouseenter', () => {
+        try { this.zombieWashVideoRef.nativeElement.play(); } catch (error) { console.log("User hasn't clicked on website yet. Video can't load..."); return; }
+      });
 
       projectElement.addEventListener('mouseleave', () => {
         setTimeout(() => {
