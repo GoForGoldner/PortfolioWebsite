@@ -14,17 +14,17 @@ export const routes: Routes = [
   {
     path: 'cdrive',
     component: CDriveComponent,
-    title: 'CDrive'
+    title: 'Tyler Goldner | CDrive'
   },
   {
     path: 'zombiewash',
     component: ZombieWashComponent,
-    title: 'ZombieWash'
+    title: 'Tyler Goldner | ZombieWash'
   },
   {
     path: 'fuse',
     component: FuseComponent,
-    title: 'Fuse Filesystem'
+    title: 'Tyler Goldner | Fuse'
   },
   {
     path: 'coming-soon',
